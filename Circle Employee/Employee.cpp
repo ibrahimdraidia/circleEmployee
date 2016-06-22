@@ -17,7 +17,7 @@ Employee::Employee(sf::CircleShape circle, sf::Text text,float x, float y)
 	this->circle.setPosition(x,y);
 
 	//set text
-	this->text.setFont(font); // bug
+	this->text.setFont(font);
 	this->text.setString("de la merde");
 	this->text.setCharacterSize(11);
 	this->text.setColor(sf::Color::White);
