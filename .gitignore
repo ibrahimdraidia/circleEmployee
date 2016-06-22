@@ -2,3 +2,4 @@
 *.opendb
 .vs/
 Circle Employee/Debug/
+Circle Employee/*.TMP
