@@ -29,8 +29,6 @@ int main()
 		// clean window
 		window.clear(sf::Color::Black);
 
-		
-		
 		// draw circle
 		window.draw(employee1.getCircle());
 		window.draw(employee2.getCircle());
@@ -42,23 +40,6 @@ int main()
 		
 		window.display();
 	}
-
-	/*
-	Employee john;
-
-	// person data
-	john.setAge(25);
-	john.setFirst_name("GREEN");
-	john.setLast_name("John");
-
-	// employee data
-	john.setJob("Software Developer");
-	john.setSociety("Google");
-
-	john.toString();
-
-	getchar();
-	*/
 
 	return 0;
 }

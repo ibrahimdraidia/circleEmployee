@@ -4,8 +4,9 @@
 Employee::Employee(sf::CircleShape circle, sf::Text text,float x, float y)
 {
 	this->circle = circle;
-	
 	this->text = text;
+
+	// load font file
 	if (!this->font.loadFromFile("arial.ttf"))
 		std::cerr << "Loading font file error" << std::endl;
 
@@ -24,27 +25,16 @@ Employee::Employee(sf::CircleShape circle, sf::Text text,float x, float y)
 	this->text.setPosition((float)(this->circle.getRadius()+x) -  this->text.getCharacterSize() * this->text.getString().getSize()/2, (float)this->circle.getRadius()+y);
 	
 }
-Employee::~Employee()
-{
-}
+Employee::~Employee(){}
 
-void Employee::setJob(std::string job)
-{
-	this->job = job;
-}
+void Employee::setJob(std::string job){ this->job = job; }
 
-void Employee::setSociety(std::string society)
-{
-	this->society = society;
-}
+void Employee::setSociety(std::string society){ this->society = society; }
 
 std::string Employee::getJob() { return this->job;  }
 std::string Employee::getSociety() { return this->society;  }
 
-unsigned short Employee::getExperience()
-{
-	return 0;
-}
+unsigned short Employee::getExperience() { return 0; }
 
 void  Employee::toString()
 {
@@ -55,12 +45,6 @@ void  Employee::toString()
 	std::cout << "Society: " << this->getSociety() << std::endl;
 }
 
-sf::CircleShape Employee::getCircle()
-{
-	return this->circle;
-}
+sf::CircleShape Employee::getCircle() { return this->circle; }
 
-sf::Text Employee::getText()
-{
-	return this->text;
-}
+sf::Text Employee::getText() { return this->text; }
