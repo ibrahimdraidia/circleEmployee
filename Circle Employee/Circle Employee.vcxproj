@@ -75,6 +75,9 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>sfml/sfml-graphics-d.lib;sfml/sfml-window-d.lib;sfml/sfml-audio-d.lib;sfml/sfml-network-d.lib;sfml/sfml-system-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -112,11 +115,15 @@
   <ItemGroup>
     <ClInclude Include="Employee.h" />
     <ClInclude Include="Person.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Employee.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Person.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Circle Employee.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
