@@ -7,7 +7,7 @@
 int main()
 {
 
-	sf::RenderWindow window(sf::VideoMode(800, 600), "Circle Employee");
+	sf::RenderWindow window(sf::VideoMode(800, 600), "Circle Employee",sf::Style::Close);
 	sf::CircleShape circle;
 	sf::Text text;
 
