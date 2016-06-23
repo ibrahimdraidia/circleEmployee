@@ -8,12 +8,6 @@ int main()
 {
 
 	sf::RenderWindow window(sf::VideoMode(800, 600), "Circle Employee",sf::Style::Close);
-	sf::CircleShape circle;
-	sf::Text text;
-
-	Employee employee1(circle,text,150,150);
-	Employee employee2(circle,text,40, 280);
-	Employee employee3(circle,text,300, 400);
 	
 	while (window.isOpen())
 	{
@@ -29,14 +23,9 @@ int main()
 		// clean window
 		window.clear(sf::Color::Black);
 
-		// draw circle
-		window.draw(employee1.getCircle());
-		window.draw(employee2.getCircle());
-		window.draw(employee3.getCircle());
-		// draw text
-		window.draw(employee1.getText());
-		window.draw(employee2.getText());
-		window.draw(employee3.getText());
+		Employee employee1(&window, 150, 150);
+		Employee employee2(&window, 40, 280);
+		Employee employee3(&window, 300, 400);
 		
 		window.display();
 	}
