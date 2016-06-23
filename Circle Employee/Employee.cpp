@@ -1,11 +1,9 @@
 #include "Employee.h"
 
 
-Employee::Employee(sf::CircleShape circle, sf::Text text,float x, float y)
+Employee::Employee(sf::RenderWindow *window,float x, float y)
 {
-	this->circle = circle;
-	this->text = text;
-
+	
 	// load font file
 	if (!this->font.loadFromFile("arial.ttf"))
 		std::cerr << "Loading font file error" << std::endl;
@@ -24,6 +22,8 @@ Employee::Employee(sf::CircleShape circle, sf::Text text,float x, float y)
 	this->text.setStyle(sf::Text::Bold | sf::Text::Underlined);
 	this->text.setPosition((float)(this->circle.getRadius()+x) -  this->text.getCharacterSize() * this->text.getString().getSize()/2, (float)this->circle.getRadius()+y);
 	
+	// draw 
+	window->draw(circle);
 }
 Employee::~Employee(){}
 

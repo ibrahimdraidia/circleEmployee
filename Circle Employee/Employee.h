@@ -9,7 +9,7 @@ class Employee : public Person
 {
 public:
 	Employee() : Person() { };
-	Employee(sf::CircleShape circle, sf::Text,float x, float y);
+	Employee(sf::RenderWindow *window,float x, float y);
 	~Employee();
 	void toString();
 	void setJob(std::string job);
